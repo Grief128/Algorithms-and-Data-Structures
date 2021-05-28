@@ -25,6 +25,7 @@ namespace Data
 
         FixedStack& operator = (const FixedStack& other)
         {
+            _length = other._length;
             for (size_t i = 0; i < _length; ++i)
                 _data[i] = other._data[i];
             return *this;
