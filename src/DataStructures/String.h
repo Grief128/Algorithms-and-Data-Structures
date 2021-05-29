@@ -138,6 +138,30 @@ namespace Data
         }
 
 
+        bool operator > (const String& other) const
+        {
+            return _data[0] > other._data[0];
+        }
+
+
+        bool operator < (const String& other) const
+        {
+            return _data[0] < other._data[0];
+        }
+
+
+        bool operator == (const String& other) const
+        {
+            return _data[0] == other._data[0];
+        }
+
+
+        bool operator >= (const String& other) const
+        {
+            return _data[0] >= other._data[0];
+        }
+
+
         size_t length() const { return _length; }
         size_t capacity() const { return _capacity; }
         bool isEmpty() const { return _length == 0; }
