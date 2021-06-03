@@ -176,9 +176,9 @@ namespace Data
         void inOrder(F func, BinaryTreeNode<T>* root)
         {
             if (root != nullptr) {
-                preOrder(func, root->left);
+                inOrder(func, root->left);
                 func(root->data);
-                preOrder(func, root->right);
+                inOrder(func, root->right);
             }
         }
 
@@ -187,8 +187,8 @@ namespace Data
         void postOrder(F func, BinaryTreeNode<T>* root)
         {
             if (root != nullptr) {
-                preOrder(func, root->left);
-                preOrder(func, root->right);
+                postOrder(func, root->left);
+                postOrder(func, root->right);
                 func(root->data);
             }
         }
